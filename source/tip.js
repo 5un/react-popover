@@ -14,15 +14,27 @@ const Tip = props => {
         : direction === "left"
           ? `${mainLength},0 0,${mainLength}, ${mainLength},${crossLength}`
           : `0,0 ${mainLength},${mainLength}, 0,${crossLength}`
+
+  const marginDir = {
+    'up': 'margin-bottom',
+    'down': 'margin-top',
+    'left': 'margin-right',
+    'right': 'margin-left'
+  }[direction]
+
   const svgProps = {
     className: "Popover-tip",
     width: isPortrait ? crossLength : mainLength,
-    height: isPortrait ? mainLength : crossLength,
+    height: isPortrait ? mainLength: crossLength,
+    style: {
+      [marginDir]: '-1px'
+    }
   }
 
   return (
     <svg {...svgProps}>
       <polygon className="Popover-tipShape" points={points} />
+      <polyline className="Popover-tipStroke" points={points} />
     </svg>
   )
 }
