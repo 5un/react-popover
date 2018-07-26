@@ -16,10 +16,10 @@ const Tip = props => {
           : `0,0 ${mainLength},${mainLength}, 0,${crossLength}`
 
   const marginDir = {
-    'up': 'margin-bottom',
-    'down': 'margin-top',
-    'left': 'margin-right',
-    'right': 'margin-left'
+    'up': 'marginBottom',
+    'down': 'marginTop',
+    'left': 'marginRight',
+    'right': 'marginLeft'
   }[direction]
 
   const svgProps = {

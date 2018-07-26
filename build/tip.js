@@ -22,10 +22,10 @@ var Tip = function Tip(props) {
   var points = direction === "up" ? "0," + mainLength + " " + mainLength + ",0, " + crossLength + "," + mainLength : direction === "down" ? "0,0 " + mainLength + "," + mainLength + ", " + crossLength + ",0" : direction === "left" ? mainLength + ",0 0," + mainLength + ", " + mainLength + "," + crossLength : "0,0 " + mainLength + "," + mainLength + ", 0," + crossLength;
 
   var marginDir = {
-    'up': 'margin-bottom',
-    'down': 'margin-top',
-    'left': 'margin-right',
-    'right': 'margin-left'
+    'up': 'marginBottom',
+    'down': 'marginTop',
+    'left': 'marginRight',
+    'right': 'marginLeft'
   }[direction];
 
   var svgProps = {
